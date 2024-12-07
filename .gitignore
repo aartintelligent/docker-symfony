@@ -1,0 +1,8 @@
+/.idea
+/api/.phpunit.result.cache
+/api/config/secrets/prod/prod.decrypt.private.php
+/api/node_modules
+/api/public/bundles
+/api/public/build
+/api/var
+/api/vendor

@@ -1,0 +1,31 @@
+services:
+
+  database:
+    image: postgres:17
+    user: root
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=flux
+      - POSTGRES_PASSWORD=password
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - database-volume:/var/lib/postgresql/data
+      # - /opt/postgres/data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+  webapp:
+    build:
+      context: .
+      target: webapp
+    environment:
+      PHP_OPCACHE__ENABLE: 0
+      PHP_OPCACHE__ENABLE_CLI: 0
+      PHP_XDEBUG__MODE: debug
+    volumes:
+      - ./symfony:/var/www:rw,delegated
+    ports:
+      - '8080:8080'
+
+volumes:
+  database-volume:

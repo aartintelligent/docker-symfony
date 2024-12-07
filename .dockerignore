@@ -1,0 +1,15 @@
+/.idea
+/.git
+/api/.env.local
+/api/.env.local.php
+/api/.env.*.local
+/api/.phpunit.result.cache
+/api/config/secrets/prod/prod.decrypt.private.php
+/api/node_modules
+/api/public/bundles
+/api/public/build
+/api/var
+/api/vendor
+/api/phpunit.xml
+/README.md
+/LICENSE
