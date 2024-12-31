@@ -10,6 +10,8 @@
 /symfony/public/build
 /symfony/var
 /symfony/vendor
+/symfony/bin/phpunit
 /symfony/phpunit.xml
+/symfony/phpunit.xml.*
 /README.md
 /LICENSE
