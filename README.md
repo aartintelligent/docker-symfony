@@ -86,8 +86,8 @@ services:
     user: root
     environment:
       - POSTGRES_DB=postgres
-      - POSTGRES_USER=app
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=${POSTGRES_USER:-app}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - database-volume:/var/lib/postgresql/data
