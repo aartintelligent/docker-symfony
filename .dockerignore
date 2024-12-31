@@ -3,7 +3,6 @@
 /symfony/.env.local
 /symfony/.env.local.php
 /symfony/.env.*.local
-/symfony/.phpunit.result.cache
 /symfony/config/secrets/prod/prod.decrypt.private.php
 /symfony/node_modules
 /symfony/public/bundles
@@ -13,5 +12,6 @@
 /symfony/bin/phpunit
 /symfony/phpunit.xml
 /symfony/phpunit.xml.*
+/symfony/.phpunit.result.cache
 /README.md
 /LICENSE
