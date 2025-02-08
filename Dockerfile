@@ -31,6 +31,12 @@ FROM aartintelligent/php:8.4-nginx AS webapp
 
 USER root
 
+COPY system /
+
+RUN chmod +x /docker/d-*.sh
+
+RUN echo "/docker/d-bootstrap-symfony.sh" | tee -a "/docker/d-bootstrap.list"
+
 COPY --chown=rootless:rootless symfony /var/www
 
 COPY --chown=rootless:rootless --from=composer /symfony/vendor /var/www/vendor
