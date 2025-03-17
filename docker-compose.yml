@@ -19,7 +19,7 @@ services:
       context: .
       target: webapp
     environment:
-      APP_INSTALL: YES
+      APP_INSTALL: NO
       PHP_OPCACHE__ENABLE: 0
       PHP_OPCACHE__ENABLE_CLI: 0
       PHP_XDEBUG__MODE: debug
